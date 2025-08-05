@@ -126,7 +126,7 @@ dmypy.json
 *.jpeg
 *.gif
 *.svg
-*.pdf
+# *.pdf
 
 # Specific files from your project
 corr.png
