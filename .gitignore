@@ -117,7 +117,7 @@ dmypy.json
 # Model files
 *.pkl
 *.joblib
-*.h5
+# *.h5
 *.hdf5
 
 # Plot/Image outputs (from your notebook)
