@@ -121,7 +121,7 @@ dmypy.json
 *.hdf5
 
 # Plot/Image outputs (from your notebook)
-*.png
+# *.png
 *.jpg
 *.jpeg
 *.gif
