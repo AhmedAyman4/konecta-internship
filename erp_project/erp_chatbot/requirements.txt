@@ -1,0 +1,27 @@
+# Core web framework
+Flask==3.0.3
+
+# Environment variables
+python-dotenv==1.0.1
+
+# MongoDB client
+pymongo==4.8.0
+
+# Sentence embeddings
+sentence-transformers==3.2.1
+torch>=2.0.0
+transformers>=4.44.0
+
+# Google Gemini + LangChain integration
+langchain-google-genai
+langchain-core
+langchain
+
+# Utilities
+numpy
+
+# for simple ui
+streamlit==1.39.0
+
+# Optional: For production deployment (if you plan to host on Render/Heroku/Docker)
+gunicorn
