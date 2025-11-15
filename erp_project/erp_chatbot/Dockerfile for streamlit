@@ -1,0 +1,36 @@
+# Use a lightweight Python image
+FROM python:3.11-slim
+
+# Set working directory
+WORKDIR /app
+
+# Copy requirements file
+COPY requirements.txt .
+
+# Install system dependencies and Python packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && pip install --no-cache-dir -r requirements.txt \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Copy the application code
+COPY . .
+
+# Streamlit configuration (to run properly inside container)
+ENV STREAMLIT_PORT=8501
+ENV STREAMLIT_HEADLESS=true
+ENV STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+
+# Expose Streamlit port
+EXPOSE 8501
+
+# Set environment variables for model caching (optional but useful in containers)
+ENV HF_HOME=/tmp/huggingface
+ENV TRANSFORMERS_CACHE=/tmp/huggingface
+ENV SENTENCE_TRANSFORMERS_HOME=/tmp/sentence_transformers
+
+# Command to run Streamlit app
+CMD ["streamlit", "run", "erp_chatbot.py", \
+     "--server.port", "7860", \
+     "--server.address", "0.0.0.0", \
+     "--server.enableXsrfProtection", "false"]
