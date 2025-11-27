@@ -4,5 +4,5 @@ A minimal pipeline to extract structured data from invoices and receipts for the
 
 ### Live demo & API
 
-- Streamlit app (demo): https://huggingface.co/spaces/ahmed-ayman/invoice-reader-app
+- Streamlit app (demo): https://huggingface.co/spaces/ahmed-ayman/automated_document_processing
 - API: https://huggingface.co/spaces/ahmed-ayman/document-processor-api
