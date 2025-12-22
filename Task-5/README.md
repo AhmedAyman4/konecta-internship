@@ -37,3 +37,6 @@ Part 5: Deliverables
 - Hyperparameter tuning experiments.
 
 Here's a link for last sessions repo as well: https://github.com/M-Abdelmegeed/Konecta-DS-W05
+
+
+[![Deployed on Hugging Face Spaces](https://img.shields.io/badge/🤗%20Hugging%20Face-Space-blue?logo=huggingface)](https://huggingface.co/spaces/ahmed-ayman/image-classification-using-cnn)
